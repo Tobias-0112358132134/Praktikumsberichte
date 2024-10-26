@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.26)  26 OCT 2024 15:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.26)  26 OCT 2024 16:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -310,24 +310,24 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.aux)
 \openout1 = `Versuchsbericht.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count296
@@ -381,7 +381,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 21.
 (/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.out) (/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.out)
 \@outlinefile=\write3
 \openout3 = `Versuchsbericht.out'.
@@ -389,13 +389,13 @@ Package hyperref Info: Link coloring OFF on input line 22.
 <bilder/JKU_Logo.png, id=32, 3937.20938pt x 1881.27844pt>
 File: bilder/JKU_Logo.png Graphic file (type png)
 <use bilder/JKU_Logo.png>
-Package pdftex.def Info: bilder/JKU_Logo.png  used on input line 25.
+Package pdftex.def Info: bilder/JKU_Logo.png  used on input line 24.
 (pdftex.def)             Requested size: 118.11118pt x 56.43591pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -408,40 +408,39 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.57 \newpage
+l.52 \newpage
               [1]
-<bilder/IMG_7612.jpg, id=60, 4047.12pt x 3035.34pt>
-File: bilder/IMG_7612.jpg Graphic file (type jpg)
-<use bilder/IMG_7612.jpg>
-Package pdftex.def Info: bilder/IMG_7612.jpg  used on input line 93.
+<bilder/Versuchsaufbau1.jpg, id=59, 4047.12pt x 3035.34pt>
+File: bilder/Versuchsaufbau1.jpg Graphic file (type jpg)
+<use bilder/Versuchsaufbau1.jpg>
+Package pdftex.def Info: bilder/Versuchsaufbau1.jpg  used on input line 77.
 (pdftex.def)             Requested size: 227.62206pt x 170.6726pt.
- [2 </Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/bilder/IMG_7612.jpg>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 116.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 92.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-<bilder/Histogramm.png, id=74, 770.88pt x 590.205pt>
-File: bilder/Histogramm.png Graphic file (type png)
-<use bilder/Histogramm.png>
-Package pdftex.def Info: bilder/Histogramm.png  used on input line 167.
+<bilder/Diagramm1.png, id=61, 770.88pt x 590.205pt>
+File: bilder/Diagramm1.png Graphic file (type png)
+<use bilder/Diagramm1.png>
+Package pdftex.def Info: bilder/Diagramm1.png  used on input line 111.
 (pdftex.def)             Requested size: 455.24411pt x 348.54213pt.
- [3] [4 </Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/bilder/Histogramm.png>] [5] (/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.aux)
+ [2 </Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/bilder/Versuchsaufbau1.jpg>] [3 </Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/bilder/Diagramm1.png>] (/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.aux)
 Package rerunfilecheck Info: File `Versuchsbericht.out' has not changed.
 (rerunfilecheck)             Checksum: CB9E9B47B14C6946C21D6805C1FB3415;863.
  ) 
 Here is how much of TeX's memory you used:
- 12093 strings out of 476025
- 192610 string characters out of 5790017
- 1861388 words of memory out of 5000000
- 32338 multiletter control sequences out of 15000+600000
+ 12083 strings out of 476025
+ 192586 string characters out of 5790017
+ 1854388 words of memory out of 5000000
+ 32334 multiletter control sequences out of 15000+600000
  526131 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,6n,67p,703b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on "/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.pdf" (6 pages, 905495 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on "/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.pdf" (4 pages, 852038 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
+ 135 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
  72 words of extra memory for PDF output out of 10000 (max. 10000000)
 

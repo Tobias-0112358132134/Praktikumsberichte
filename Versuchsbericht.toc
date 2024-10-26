@@ -4,5 +4,5 @@
 \contentsline {section}{\numberline {3}Versuchsbeschreibung}{2}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Versuchsaufbau}{2}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Durchführung}{2}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Messergebnisse und Auswertung}{3}{section.4}%
-\contentsline {section}{\numberline {5}Diskussion}{4}{section.5}%
+\contentsline {section}{\numberline {4}Messergebnisse und Auswertung}{2}{section.4}%
+\contentsline {section}{\numberline {5}Diskussion}{3}{section.5}%
