@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.26)  26 OCT 2024 16:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.26)  26 OCT 2024 16:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.tex"
-(/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.tex
+**"/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikumsbeberichte/Versuchsbericht.tex"
+(/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikumsbeberichte/Versuchsbericht.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -307,7 +307,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count295
 \l__pdf_internal_box=\box56
-) (/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.aux)
+) (/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikumsbeberichte/Versuchsbericht.aux)
 \openout1 = `Versuchsbericht.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -382,7 +382,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 21.
-(/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.out) (/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.out)
+(/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikumsbeberichte/Versuchsbericht.out) (/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikumsbeberichte/Versuchsbericht.out)
 \@outlinefile=\write3
 \openout3 = `Versuchsbericht.out'.
 
@@ -400,7 +400,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} </Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/bilder/JKU_Logo.png>] (/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.toc)
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} </Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikumsbeberichte/bilder/JKU_Logo.png>] (/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikumsbeberichte/Versuchsbericht.toc)
 \tf@toc=\write4
 \openout4 = `Versuchsbericht.toc'.
 
@@ -413,31 +413,31 @@ l.52 \newpage
 <bilder/Versuchsaufbau1.jpg, id=59, 4047.12pt x 3035.34pt>
 File: bilder/Versuchsaufbau1.jpg Graphic file (type jpg)
 <use bilder/Versuchsaufbau1.jpg>
-Package pdftex.def Info: bilder/Versuchsaufbau1.jpg  used on input line 77.
+Package pdftex.def Info: bilder/Versuchsaufbau1.jpg  used on input line 80.
 (pdftex.def)             Requested size: 227.62206pt x 170.6726pt.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 92.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 97.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 <bilder/Diagramm1.png, id=61, 770.88pt x 590.205pt>
 File: bilder/Diagramm1.png Graphic file (type png)
 <use bilder/Diagramm1.png>
-Package pdftex.def Info: bilder/Diagramm1.png  used on input line 111.
+Package pdftex.def Info: bilder/Diagramm1.png  used on input line 116.
 (pdftex.def)             Requested size: 455.24411pt x 348.54213pt.
- [2 </Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/bilder/Versuchsaufbau1.jpg>] [3 </Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/bilder/Diagramm1.png>] (/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.aux)
+ [2 </Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikumsbeberichte/bilder/Versuchsaufbau1.jpg>] [3 </Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikumsbeberichte/bilder/Diagramm1.png>] (/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikumsbeberichte/Versuchsbericht.aux)
 Package rerunfilecheck Info: File `Versuchsbericht.out' has not changed.
 (rerunfilecheck)             Checksum: CB9E9B47B14C6946C21D6805C1FB3415;863.
  ) 
 Here is how much of TeX's memory you used:
  12083 strings out of 476025
- 192586 string characters out of 5790017
+ 192326 string characters out of 5790017
  1854388 words of memory out of 5000000
  32334 multiletter control sequences out of 15000+600000
  526131 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,6n,67p,703b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 63i,6n,67p,685b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on "/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikum 1 - Würfeln/Versuchsbericht/Versuchsbericht.pdf" (4 pages, 852038 bytes).
+Output written on "/Users/TobiasMittermair/Library/CloudStorage/OneDrive-JohannesKeplerUniversitätLinz/JKU/1 Semester/4_Einführungspraktikum Physik/Praktikumsbeberichte/Versuchsbericht.pdf" (4 pages, 852038 bytes).
 PDF statistics:
  135 PDF objects out of 1000 (max. 8388607)
  99 compressed objects within 1 object stream

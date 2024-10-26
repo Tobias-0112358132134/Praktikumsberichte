@@ -1,1 +1,13 @@
+# MacOS
 .DS_Store
+
+# Temporäre und Log-Dateien
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# LaTeX-interne Hilfsdateien
+*.fls
+*.fdb_latexmk
