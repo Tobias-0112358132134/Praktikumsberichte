@@ -11,3 +11,6 @@
 # LaTeX-interne Hilfsdateien
 *.fls
 *.fdb_latexmk
+
+# python .venv directory
+.venv

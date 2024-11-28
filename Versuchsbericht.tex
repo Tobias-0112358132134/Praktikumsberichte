@@ -81,26 +81,49 @@ vernachlässigt wird.
 
 Die Reaktionszeit kann durch verschiedene Faktoren beeinflusst werden. Nennenswert hierfür ist der Lidschlag (der die Sehfähigkeit 
 für eine kurze Zeit unterbricht) oder die körperliche Verfassung sowie die Konzentrationsfähigkeit der zu testenden Person.
-Mittelwert
-Standardabweichung
-Standardabweichung des Mittelwertes
-%//TODO
+
+Für die statistischen Größen werden folgende Formeln verwendet:
+
+\begin{equation}
+    \label{eq:mittelwert}
+    \mu = \frac{1}{N} \sum_{i=1}^{N} x_i
+\end{equation}
+
+\begin{equation}
+    \label{eq:standardabweichung}
+    \sigma = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}
+\end{equation}
+
+\begin{equation}
+    \label{eq:standardabweichungDesMittelwerts}
+    \sigma_\mu = \frac{\sigma}{\sqrt{N}}
+\end{equation}
+
+Mithilfe der Fehlerfortpflanzung kann die Unsicherheit der Fallstrecke auf die Reaktionszeit
+umgerechnet werden. Da die Messungen unkorreliert sind, kann man die Gauß'sche Fehlerfortpflanzung
+verwenden:
+
+\begin{equation}
+    \label{eq:GaußFehlerfortpflanzung}
+    \sigma_t = \sqrt{\left(\frac{\partial t}{\partial h} \cdot \sigma_h\right)^2}
+\end{equation}
 
 
 \section{Versuchsbeschreibung}
 \subsection{Versuchsaufbau}
-%//[ ] TODO: Versuchsaufbau
+%//[x] TODO: Versuchsaufbau
 % Wie sieht der Versuchsaufbau aus? (Skizze, Anleitung, Geräte, …)
 % auf Abbildungen Bezug nehmen
-
 
 Für den Versuch wurde sowohl ein 30cm-Lineal als auch ein Millimeterpapier zur Verfügung gestellt. Weiters stand ein 
 Laptop zur Führung des Laborprotokolls bereit und zur Dokumentation der Werte.
 
 \subsection{Durchführung}
-%//[ ] TODO: Durchführung
+%//[x] TODO: Durchführung
 % Wie wurde der Versuch durchgeführt bzw. ausgewertet?
 % auch wann und wo?
+
+Der Versuch wurde am 22. November 2024 im Raum P122 an der JKU in Linz durchgeführt. Es wurden 138 Messpunkte erfasst.
 
 Der "Tester" (Tobias Mittermair) hält das Lineal senkrecht zum
 Boden, möglichst ohne zu zittern. Um dies zu gewährleisten, wurden die zwei Finger, die das Lineal hielten, von 
@@ -120,39 +143,147 @@ fallengelassen wird. Andererseits soll das Lineal immer in ungefähr der gleiche
 gehalten werden.
 
 \section{Messergebnisse und Auswertung}
-%//[ ] TODO: Messung - evtl. nur Verweis auf Messergebnisse
+\subsection{Messwerte und Unsicherheiten}
+%//[x] TODO: Messung - evtl. nur Verweis auf Messergebnisse
 % Eigentliche Messung!
 % Wie groß sind die Messunsicherheiten („Messfehler“)?
 
-Die Messwerte sind dem Anhang (Kapitel \ref{Messprotokoll}) zu entnehmen. 
+Die Messwerte sind dem Anhang (Kapitel \ref{AnahangFallstrecke}) zu entnehmen. 
 
-Bezüglich den Messunsicherheiten unterscheiden man bei den abgelesenen Messwerten die 
-Skalenunsicherheit des Lineals und der Unsicherheit des Daumen 
-Die Skalenunsicherheit beträgt $\pm 0.5mm$, welche man in Anbetracht der Ableseunsicherheit 
-vernachlässigen kann, da diese auf $\pm 3mm$ geschätzt wird. In diese Unsicherheit fließen Faktoren ein, wie die Perspektive 
-und die Auflagefläche des Daumens, die sich je nach ausgeübter Kraft beim Zugreifen variiert. 
+Bezüglich den Messunsicherheiten unterscheidet man bei den abgelesenen Messwerten die 
+Skalenunsicherheit des Lineals und der Unsicherheit des Daumens 
+Die Skalenunsicherheit (übersetzt auf normalverteilt) beträgt $\pm \frac{0.5}{\sqrt{3}}\mathrm{mm}$,
+welche man in Anbetracht der Ableseunsicherheit vernachlässigen kann, da diese auf $\pm 3\mathrm{mm}$
+geschätzt wird. In diese Unsicherheit fließen Faktoren ein, wie die Perspektive
+und die Auflagefläche des Daumens, die sich je nach ausgeübter Kraft beim Zugreifen variiert.
+Deshalb wird $u_h \approx 3\mathrm{mm}$ gewählt.
+
+Da die Messungen unkorreliert sind, kann mithilfe der Gauß'schen Fehlerfortpflanzung
+(Gl. \ref{eq:GaußFehlerfortpflanzung}) die Unsicherheit der Fallstrecke auf die Reaktionszeit umgerechnet werden:
+
+Die Ableitung der Reaktionszeit nach der Fallstrecke ergibt sich zu:
+
+\begin{equation}
+    \frac{\partial t(h)}{\partial h} = \frac{1}{\sqrt{2 \cdot g \cdot h}}
+\end{equation}
+
+Nun kann die Unsicherheit der Reaktionszeit berechnet werden:
+
+\begin{equation}
+    u_t(h) = \sqrt{\left(\frac{1}{\sqrt{2 \cdot g \cdot h}} \cdot u_h\right)^2}
+\end{equation}
+
+An dieser Formel ist zu erkennen, dass die Unsicherheit der Reaktionszeit mit steigender Fallstrecke abnimmt.
+Beispielsweise für $h=h(\mu_t)$ ergibt sich $u_t(h(\mu_t)) \approx 0.0018\mathrm{s}$.
 
 
-%//[ ] TODO: Auswertung
+\subsection{Auswertung}
+%//[x] TODO: Auswertung
 % evtl. Formeln, etc.
 % auf richtiges Runden der Werte achten
 % evtl. auf Gleichungen Bezug nehmen
 
-- Diagramme
-  - Höhenverteilung
-  - Zeitverteilung (Gaußverteilung)
-- Statistische Auswertung
-- Zeiten Tabelle -> Anhang
-- 
+Der Mittelwert, die Standardabweichung und Standardabweichung des Mittelwerts wurden nach den
+Gleichungen \ref{eq:mittelwert}, \ref{eq:standardabweichung} und \ref{eq:standardabweichungDesMittelwerts}
+jeweils für die Fallstrecke $h$ und die Reaktionszeit $t$ berechnet:
 
-
-% Diagramm(e) der Auswertung
-\begin{figure}[H]
-    \label{AbbAuswertung1}
+\begin{table}[H]
     \centering
-    \includegraphics[width=\textwidth]{bilder/Diagramm1.png}        %// [ ] TODO: Diagramm Bild anpassen
-    \caption{<>}                                                    %// [ ] TODO: Diagramm Bildunterschrift anpassen
+    \begin{tabular}{c c c}
+        \parbox{4cm}{
+            \begin{align*}
+                \mu_h &= 14.42\mathrm{cm} \\
+                \sigma_h &= 2.55\mathrm{cm} \\
+                {\sigma_\mu}_h &= 0.22\mathrm{cm}
+            \end{align*}
+        } & \hspace{1cm} & \parbox{4cm}{
+            \begin{align*}
+                \mu_t &= 0.1708\mathrm{s} \\
+                \sigma_t &= 0.0152\mathrm{s} \\
+                {\sigma_\mu}_t &= 0.0013\mathrm{s}
+            \end{align*}
+        } \\
+    \end{tabular}
+\end{table}
+
+Zusätzlich wurde überprüft, ob $t(\mu_h)\stackrel{?}{=}\mu_t$ ist:
+
+\begin{align*}
+    t(\mu_h) &= \sqrt{\frac{2 \cdot \mu_h}{g}} \\
+    &= 0.1714\mathrm{s} \neq \mu_t
+\end{align*}
+
+Außerdem wurden Histogramme für Fallstrecke und Reaktionszeit angefertigt, um die Verteilung
+der Messwerte zu visualisieren. Weiters sind in beiden Diagrammen entsprechende Normalverteilungskurven
+eingezeichnet. Allerdings sei darauf hingewiesen, dass die Normalverteilungskurven nur als Referenz dienen.
+
+% Diagramme der Auswertung
+\begin{figure}[H]
+    \label{Abb:HistogrammFallstrecke}
+    \centering
+    \includegraphics[width=15cm]{bilder/HistogrammFallstrecke.png}      %// [x] TODO: Diagramm Bild anpassen
+    \caption{Histogramm der Fallstrecke}                                %// [x] TODO: Diagramm Bildunterschrift anpassen
 \end{figure}
+
+\vfill
+
+\begin{figure}[H]
+    \label{Abb:HistogrammReaktionszeit}
+    \centering
+    \includegraphics[width=15cm]{bilder/HistogrammReaktionszeit.png}    %// [x] TODO: Diagramm Bild anpassen
+    \caption{Histogramm der Reaktionszeit}                              %// [x] TODO: Diagramm Bildunterschrift anpassen
+\end{figure}
+
+
+\section{Zusätzliche Messung der Reaktionszeit}
+
+Zum Vergleich wird die Reaktionszeit von Eva Brandstätter mithilfe einer Stoppuhr gemessen.
+Dabei werden auf der Anzeige alle, bis auf die erste Zehner-Ziffer der Sekundenanzeige verdeckt (Abb.
+\ref{Abb:ZusatzversuchBild1}) und die Stoppuhr gestartet. Nach 10s erscheint eine 1 in der Anzeige
+(Abb. \ref{Abb:ZusatzversuchBild2}), woraufhin so schnell wie möglich gestoppt wird. Danach wird
+die Millisekundenanzeige als Wert für die Reaktionszeit abgelesen (Abb. \ref{Abb:ZusatzversuchBild3}).
+
+\begin{multicols}{3}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=5cm]{bilder/Zusatzversuch_1_export.jpg}
+        \caption{\\Ausgangssituation}
+        \label{Abb:ZusatzversuchBild1}
+    \end{figure}
+    \columnbreak
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=5cm]{bilder/Zusatzversuch_2_export.jpg}
+        \caption{\\auslösendes Ereignis}
+        \label{Abb:ZusatzversuchBild2}
+    \end{figure}
+    \columnbreak
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=5cm]{bilder/Zusatzversuch_3_export.jpg}
+        \caption{Stoppuhr mit hervorgehobener Millisekundenanzeige}
+        \label{Abb:ZusatzversuchBild3}
+    \end{figure}
+    \columnbreak
+\end{multicols}
+
+Dabei wurden für fünf Wiederholungen folgende Werte gemessen:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        n & $t$ / $\mathrm{s}$ \\
+        \hline
+        1 & 0.280 \\
+        2 & 0.280 \\
+        3 & 0.220 \\
+        4 & 0.250 \\
+        5 & 0.250 \\
+        \hline
+    \end{tabular}
+\end{table}
+
 
 \section{Diskussion}
 %//[ ] TODO: Diskussion
@@ -164,13 +295,23 @@ und die Auflagefläche des Daumens, die sich je nach ausgeübter Kraft beim Zugr
 % zB Standardabweichung diskutieren, berechnete Größen nennen
 
 <>
+- vgl. Normalverteilung und verzerrte Normalverteilung
+- vgl. Reaktionszeit mit Stoppuhr
+- 
 
+\newpage
 \section{Anhang}
-\subsection{Messprotokoll}
-\label{Messprotokoll}
+\subsection{Fallstrecke \textit{h}}
+\label{AnahangFallstrecke}
+
+\input{AnhangFallstrecke.tex}
 
 
-\input{table.tex}
+\newpage
+\subsection{Reaktionszeit \textit{t}}
+\label{AnahangReaktionszeit}
+
+\input{AnhangReaktionszeit.tex}
 
 
 \end{document}
