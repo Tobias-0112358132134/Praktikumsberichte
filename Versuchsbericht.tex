@@ -8,12 +8,12 @@
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage{geometry}
-\usepackage[german]{babel}
+\usepackage[ngerman,provide=*]{babel}
 \usepackage{enumitem}
 \usepackage{parskip}
 \usepackage{underscore}
 \usepackage{hyperref}
-% \usepackage{multicol}
+\usepackage{multicol}
 
 \geometry{a4paper, left=25mm, right=25mm, top=20mm, bottom=20mm}
 
@@ -23,9 +23,9 @@
     \centering
     \includegraphics[scale = 0.03]{bilder/JKU_Logo.png}\\[1.0 cm]	% JKU Logo
     \textsc{\Large Einführungspraktikum Physik}\\[0.5 cm]	        % LVA Name
-    \textsc{\large x. Versuch}\\[0.5 cm]				            % Versuch Nummer    // [ ] TODO: Versuch Nummer anpassen
+    \textsc{\large 2. Versuch}\\[0.5 cm]				            % Versuch Nummer    // [x] TODO: Versuch Nummer anpassen
     \rule{\linewidth}{0.4 mm} \\[0.4 cm]
-    { \huge \bfseries <VersuchName>}\\                              % Versuch Name      // [ ] TODO: Versuch Name anpassen
+    { \huge \bfseries Reaktionszeit}\\                              % Versuch Name      // [x] TODO: Versuch Name anpassen
     \rule{\linewidth}{0.4 mm} \\[1.5 cm]
     \begin{minipage}{0.8\textwidth}
         \begin{flushleft} \large
@@ -57,13 +57,34 @@
 %//[ ] TODO: Einleitung
 % Was soll gemessen werden? (Ziel / Motivation / Hypothese / erwartetes Ergebnis)
 
-<>
+In diesem Experiment soll die mittlere Reaktionszeit einer Probandin (Eva Brandstätter) sowie die Verteilung 
+der Reaktionszeit ermittelt werden. 
+Es wird vermutet, dass die Reaktionszeit annähernd Normalverteilt ist. Die gemessene Größe, aus der die
+Reaktionszeit ermittelt wird (Länge), ist aber nicht direkt proportional zur Zeit. Deshalb wird die 
+Hypothese aufgestellt, dass die Verteilung dieser Größe nicht mehr einer Gaußverteilung entspricht (verzerrt ist).
 
 \section{Grundlagen}
 %//[ ] TODO: Grundlagen
 % (kurz!) Was muss ich über die zu messende Größe wissen?
 
-<>
+Als Reaktionszeit bezeichnet man die Zeit, die vergeht von einem auslösenden Ereignis bis zu einer Reaktion seitens der zu Testenden.
+In diesem Versuch wird dabei die Fallstrecke $h_i$ gemessen, die das Lineal zurücklegt, bevor es von der zu Testenden gefangen wird.
+Der Index $i$ steht dabei für den $i$-ten Messwert.  
+Aus dieser Strecke berechnet man sich mit der folgenden Formel die Reaktionszeit von der zu Testeden.
+
+\begin{equation}
+    t_i = \sqrt{\frac{2 \cdot h_i}{g}}
+\end{equation}
+
+Dabei ist $g$ die Erdbeschleunigung, die in diesem Versuch mit $9.81 \frac{m}{s^2}$ angenommen wird und deren Unsicherheit
+vernachlässigt wird. 
+
+Die Reaktionszeit kann durch verschiedene Faktoren beeinflusst werden. Nennenswert hierfür ist der Lidschlag (der die Sehfähigkeit 
+für eine kurze Zeit unterbricht) oder die körperliche Verfassung sowie die Konzentrationsfähigkeit der zu testenden Person.
+Mittelwert
+Standardabweichung
+Standardabweichung des Mittelwertes
+%//TODO
 
 
 \section{Versuchsbeschreibung}
@@ -72,41 +93,57 @@
 % Wie sieht der Versuchsaufbau aus? (Skizze, Anleitung, Geräte, …)
 % auf Abbildungen Bezug nehmen
 
-<>
 
-% Bild vom Versuchsaufbau
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{bilder/Versuchsaufbau1.jpg}           %// [ ] TODO: Versuchsaufbau Bild anpassen
-    \caption{<>}                                                                %// [ ] TODO: Versuchsaufbau Bildunterschrift anpassen
-    \label{AbbVersuchsaufbau1}
-\end{figure}
+Für den Versuch wurde sowohl ein 30cm-Lineal als auch ein Millimeterpapier zur Verfügung gestellt. Weiters stand ein 
+Laptop zur Führung des Laborprotokolls bereit und zur Dokumentation der Werte.
 
 \subsection{Durchführung}
 %//[ ] TODO: Durchführung
 % Wie wurde der Versuch durchgeführt bzw. ausgewertet?
 % auch wann und wo?
 
-<>
+Der "Tester" (Tobias Mittermair) hält das Lineal senkrecht zum
+Boden, möglichst ohne zu zittern. Um dies zu gewährleisten, wurden die zwei Finger, die das Lineal hielten, von 
+der anderen Hand gestützt. Die Versuchsperson (die "zu
+Testende") platziert ihre Hand an der 0cm-Markierung, sodass an der Oberkante des Daumens die 0cm-Markierung 
+abgelesen werden kann. Dabei wird der Abstand zwischen den Fingern möglichst gering gewählt (ohne das Lineal zu 
+berühren), sodass beim Durchfallen des Lineals dieses schnell gefasst werden kann.
+
+Nun lässt der Tester das Lineal möglichst unvorhersehbar für die andere Person los und die zu Testende fängt es 
+so schnell es ihr möglich ist.
+Danach wird die Länge am Lineal and der Oberkante des Daumens abgelesen und in
+die Tabelle eingetragen. Weiters wird nebenbei ein Histogramm auf einem Millimeterpapier
+angefertigt.
+
+Es ist einerseits darauf zu achten, dass es vom "Tester" keinerlei Signal gibt, dass das Lineal
+fallengelassen wird. Andererseits soll das Lineal immer in ungefähr der gleichen Position vom Tester zur Probandin
+gehalten werden.
 
 \section{Messergebnisse und Auswertung}
 %//[ ] TODO: Messung - evtl. nur Verweis auf Messergebnisse
 % Eigentliche Messung!
 % Wie groß sind die Messunsicherheiten („Messfehler“)?
 
-Die Messwerte sind dem auf \url{https://eln.jku.at/} zugänglichen bzw. angehängten Laborprotokoll \glqq <>\grqq{} zu entnehmen.         %//[ ] TODO: Protokoll Dateiname anpassen
+Die Messwerte sind dem Anhang (Kapitel \ref{Messprotokoll}) zu entnehmen. 
+
+Bezüglich den Messunsicherheiten unterscheiden man bei den abgelesenen Messwerten die 
+Skalenunsicherheit des Lineals und der Unsicherheit des Daumen 
+Die Skalenunsicherheit beträgt $\pm 0.5mm$, welche man in Anbetracht der Ableseunsicherheit 
+vernachlässigen kann, da diese auf $\pm 3mm$ geschätzt wird. In diese Unsicherheit fließen Faktoren ein, wie die Perspektive 
+und die Auflagefläche des Daumens, die sich je nach ausgeübter Kraft beim Zugreifen variiert. 
+
 
 %//[ ] TODO: Auswertung
 % evtl. Formeln, etc.
 % auf richtiges Runden der Werte achten
 % evtl. auf Gleichungen Bezug nehmen
 
-\begin{equation}
-    \label{Gl1}
-    x = x
-\end{equation}
-
-\vspace{0,5cm}
+- Diagramme
+  - Höhenverteilung
+  - Zeitverteilung (Gaußverteilung)
+- Statistische Auswertung
+- Zeiten Tabelle -> Anhang
+- 
 
 
 % Diagramm(e) der Auswertung
@@ -127,5 +164,13 @@ Die Messwerte sind dem auf \url{https://eln.jku.at/} zugänglichen bzw. angehän
 % zB Standardabweichung diskutieren, berechnete Größen nennen
 
 <>
+
+\section{Anhang}
+\subsection{Messprotokoll}
+\label{Messprotokoll}
+
+
+\input{table.tex}
+
 
 \end{document}
