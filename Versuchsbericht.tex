@@ -107,6 +107,8 @@ Für die statistischen Größen werden folgende Formeln verwendet:
     \sigma_\mu = \frac{\sigma}{\sqrt{N}}
 \end{equation}
 
+\newpage
+
 Mithilfe der Fehlerfortpflanzung kann die Unsicherheit der Fallstrecke auf die Reaktionszeit
 umgerechnet werden. Da die Messungen unkorreliert sind, kann man die Gauß'sche Fehlerfortpflanzung
 verwenden:
@@ -166,8 +168,10 @@ geschätzt wird. In diese Unsicherheit fließen Faktoren ein, wie die Perspektiv
 und die Auflagefläche des Daumens, die sich je nach ausgeübter Kraft beim Zugreifen variiert.
 Deshalb wird $u_h \approx 3\mathrm{mm}$ gewählt.
 
+\newpage
+
 Da die Messungen unkorreliert sind, kann mithilfe der Gauß'schen Fehlerfortpflanzung
-(Gl. \ref{eq:GaußFehlerfortpflanzung}) die Unsicherheit der Fallstrecke auf die Reaktionszeit umgerechnet werden:
+(Gl. \ref{eq:GaußFehlerfortpflanzung}) die Unsicherheit der Fallstrecke auf die Reaktionszeit umgerechnet werden
 
 Die Ableitung der Reaktionszeit nach der Fallstrecke ergibt sich zu:
 
@@ -279,6 +283,7 @@ Dabei wurden für fünf Wiederholungen folgende Werte gemessen:
 
 \begin{table}[H]
     \centering
+    \label{Tab:StoppuhrVersuch}
     \begin{tabular}{|c|c|}
         \hline
         n & $t$ / $\mathrm{s}$ \\
@@ -290,6 +295,7 @@ Dabei wurden für fünf Wiederholungen folgende Werte gemessen:
         5 & 0.250 \\
         \hline
     \end{tabular}
+    \caption{Messwerte der Reaktionszeit mit Stoppuhr}
 \end{table}
 
 
@@ -308,23 +314,43 @@ Standardabweichung des Mittelwerts sind in einer sinnvollen Größenordnung und 
 Aus der Fehlerfortpflanzung ging hervor, dass für realistische Fallstrecken die Unsicherheit der Reaktionszeit
 mit ca. $1$-$2\mathrm{ms}$ sehr gering ist.
 
+Es wurde erkannt, dass $t(\mu_h)>\mu_t$ ist. Dies ist darauf zurückzuführen, dass die Verteilungsform
+der Fallstrecke nicht mehr einer Normalverteilung entspricht, und eher nach links verzerrt ist.
+
+Aus der Versuchsdurchführung wurden folgende Erkenntnisse gewonnen und Verbesserungsvorschläge abgeleitet:\\
+Da die Zeit, die der Tester gewartet hat, bevor er das Lineal losgelassen hat, nicht dokumentiert wurde, 
+kann nicht beurteilt werden, ob diese Zeit tatsächlich zufällig verteilt war, oder ob es eine unbewusste
+Tendenz gab, bestimmte Zeiten zu wählen. Hätte man diese Zeit dokumentiert, könnte man daraus 
+schließen, dass Ausreißerwerte in der Wartezeit eine deutliche Verschlechterung der Reaktionszeit der
+Probandin zur Folge hätten.\\
+Um auszuschließen, dass die Probandin noch nicht bereit war bzw. der Daumen noch nicht richtig ausgerichtet war,
+wurde vereinbart, dass das Lineal erst nach einem Signal der Probandin losgelassen wird. Dadurch könnte die
+Reaktionszeit verfälscht worden sein.\\
+Außerdem sei erwähnt, dass die gemessenen Reaktionszeiten vermutlich im Zusammenhang mit der physischen
+Verfassung der Probandin standen.
+
+Weiters kann analysiert werden, ob es über die Dauer des Versuchs hinweg eine positive oder negative Tendenz im
+Bezug auf die Reaktionszeit gab. Folgendes Diagramm (Abb. \ref{Abb:ReaktionszeitTendenz}) veranschaulicht, dass nur eine minimale Verschlechterung
+festgestellt werden kann. Trotzdem wurde das Lineal von der fähigen Probandin nie fallengelassen.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=13cm]{bilder/Tendenz1.png}          %// [x] TODO: Diagramm Bild anpassen
+    \caption{Tendenz der Reaktionszeit}
+    \label{Abb:ReaktionszeitTendenz}
+\end{figure}
+
+Um eine einen Vergleichswert für die aus den Fallstrecken ermittelte Reaktionszeit zu haben, wurde
+eine zusätzliche direkte Reaktionszeitmessung mit einer Stoppuhr durchgeführt. Die gemessenen Werte
+(Tab. \ref{Tab:StoppuhrVersuch}) liegen im Bereich von $0.220\mathrm{s}$ bis $0.280\mathrm{s}$ und
+sind somit in einer ähnlichen Größenordnung, jedoch etwas höher als die aus den Fallstrecken ermittelten
+Werte. Dies könnte auf mehrere Faktoren zurückzuführen sein, vor allem aber war der Stichprobenumfang
+des Zusatzversuchs mit $n=5$ deutlich geringer und ist somit nur bedingt aussagekräftig.
+
+Abschließend ist erwähnenswert, dass es wichtig ist, die Reaktionszeit zu kennen und zu verstehen,
+da diese Einfluss auf andere Versuche und deren Ergebnisse haben kann.
 
 
-
-
-*- Fehlerfortpflanzung -> kleine Unsicherheit für realistische Reaktionszeiten
-
-- Unterschied zwischen $\mu_t$ und $t(\mu_h)$ => vvv
-- vgl. Normalverteilung und verzerrte Normalverteilung
-
-- Zufälligkeit vom Loslassen
-- Lernkurve / Konzentrationsnachlass
-
-- Eva ist so gut und hat das Lineal immer gefangen - yayyy!!!!!!!!
-
-- vgl. Reaktionszeit mit Stoppuhr
-
-- wichtig, Reaktionszeit zu kennen, um Versuchsergebnisse richtig zu interpretieren
 
 \newpage
 \section{Anhang}
@@ -342,3 +368,5 @@ mit ca. $1$-$2\mathrm{ms}$ sehr gering ist.
 
 
 \end{document}
+
+% unsicherheit der zeit zu jeder zeit dazuschreiben
