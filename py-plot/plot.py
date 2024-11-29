@@ -43,16 +43,25 @@ plt.figure(figsize=(8, 6))
 # plt.plot(t_values, t_pdf, label="Normalverteilung von $t$", color="blue")
 
 # Längen-Verteilung
-plt.plot(h_range, h_pdf_interpolated, label="Verteilung von $h$", color="red")
+plt.plot(h_range, h_pdf_interpolated, label="tatsächliche Verteilung von $h$", color="red")
 
 # Gaussian approximation of h
-plt.plot(h_range, h_gaussian_pdf, label="Gauss'sche Approximation von $h$", color="red", linestyle='dashed')
+plt.plot(h_range, h_gaussian_pdf, label="Normalvert.-Approximation von $h$", color="red", linestyle='dashed')
 
-plt.xlabel('$h$ /m')
+# # line at the actual mean value of h
+# plt.axvline(x=mu_h_act, color='black', linestyle='dotted', label='tatsächlicher Erwartungswert von $h$')
+
+# # line at the corresponding h value for the mean value of t
+# plt.axvline(x=(g * mu**2) / 2, color='blue', linestyle='dotted', label='Erwartungswert von $h$')
+
+plt.xlabel('$h$')
 plt.ylabel('Wahrscheinlichkeitsdichte')
 plt.legend()
 plt.title('Vergleich der Verteilungen von $h$')
 plt.grid(True)
+
+plt.gca().set_xticklabels([])
+plt.gca().set_yticklabels([])
 
 plt.savefig('py-plot/plot.png', dpi=400)
 
