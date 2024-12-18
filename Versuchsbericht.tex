@@ -13,6 +13,7 @@
 \usepackage{parskip}
 \usepackage{underscore}
 \usepackage{hyperref}
+\usepackage{icomma}
 % \usepackage{multicol}
 
 \geometry{a4paper, left=25mm, right=25mm, top=20mm, bottom=20mm}
@@ -23,9 +24,9 @@
     \centering
     \includegraphics[scale = 0.03]{bilder/JKU_Logo.png}\\[1.0 cm]	% JKU Logo
     \textsc{\Large Einführungspraktikum Physik}\\[0.5 cm]	        % LVA Name
-    \textsc{\large x. Versuch}\\[0.5 cm]				            % Versuch Nummer    // [ ] TODO: Versuch Nummer anpassen
+    \textsc{\large 3. Versuch}\\[0.5 cm]				            % Versuch Nummer    // [x] TODO: Versuch Nummer anpassen
     \rule{\linewidth}{0.4 mm} \\[0.4 cm]
-    { \huge \bfseries <VersuchName>}\\                              % Versuch Name      // [ ] TODO: Versuch Name anpassen
+    { \huge \bfseries Brennweite}\\                                 % Versuch Name      // [x] TODO: Versuch Name anpassen
     \rule{\linewidth}{0.4 mm} \\[1.5 cm]
     \begin{minipage}{0.8\textwidth}
         \begin{flushleft} \large
@@ -57,14 +58,15 @@
 %//[ ] TODO: Einleitung
 % Was soll gemessen werden? (Ziel / Motivation / Hypothese / erwartetes Ergebnis)
 
-<>
+In diesem Versuch soll die Brennweite und die zugehörige Unsicherheit einer Sammellinse durch 
+das Bessel-Verfahren bestimmt werden.
 
 \section{Grundlagen}
 %//[ ] TODO: Grundlagen
 % (kurz!) Was muss ich über die zu messende Größe wissen?
 
+% Größe s beschreiben (Bezug auf optische bank)
 <>
-
 
 \section{Versuchsbeschreibung}
 \subsection{Versuchsaufbau}
@@ -72,14 +74,23 @@
 % Wie sieht der Versuchsaufbau aus? (Skizze, Anleitung, Geräte, …)
 % auf Abbildungen Bezug nehmen
 
-<>
+Der Versuch wurde am 13.12.2024 im Praktikumsraum P122 an der JKU in Linz zwischen 11:15 und
+13:15 durchgeführt.
+
+Für diesen Versuch wurden eine Sammellinse, ein Lineal, eine optische Bank (mit Reitern, LED
+mit Kondensorlinse, Geodreieck als Objekt und Schirm) bereitgestellt.
+Weiters stand ein Laptop zur Führung des Laborprotokolls bereit und zur Dokumentation der Werte.
+In der nachstehenden Abbildung \ref{Abb:Versuchsaufbau1} ist der Aufbau des Versuches dargestellt.
+Dabei ist zu erkennen, dass von links weg eine LED mit Kondensorlinse, danach der Objektträger
+mit Geodreieck und darauffolgend eine Linse, vor dem sich ganz rechts befindenden Schirm auf der
+optischen Bank angeordnet sind.
 
 % Bild vom Versuchsaufbau
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{bilder/Versuchsaufbau1.jpg}           %// [ ] TODO: Versuchsaufbau Bild anpassen
-    \caption{<>}                                                                %// [ ] TODO: Versuchsaufbau Bildunterschrift anpassen
-    \label{AbbVersuchsaufbau1}
+    \includegraphics[width=0.5\textwidth]{bilder/Versuchsaufbau1.jpg}           %// [x] TODO: Versuchsaufbau Bild anpassen
+    \caption{optische Bank mit optischen Elementen}                             %// [x] TODO: Versuchsaufbau Bildunterschrift anpassen
+    \label{Abb:Versuchsaufbau1}
 \end{figure}
 
 \subsection{Durchführung}
@@ -87,14 +98,26 @@
 % Wie wurde der Versuch durchgeführt bzw. ausgewertet?
 % auch wann und wo?
 
-<>
+Vor dem tatsächlichen Versuch wurde zuerst die Brennweite der Linse grob abgeschätzt.
+Dabei wurde die Linse über den Labortisch gehalten und so lange auf und ab bewegt, bis das
+Abbild der Deckenbeleuchtung scharf erkennbar war. Der Abstand zwischen Linse und Abbildung
+wurde dann mit dem Lineal abgemessen. Dieser Abstand entspricht annähernd der Brennweite
+der Linse und beträgt ungefähr 9,6cm $\pm\:1\mathrm{cm}$. Dies kann man sagen, da der Abstand
+zur Deckenleuchte im Verhältnis zum Abstand der Abbildung zur Linse hinreichend groß ist.
+
+Nun kann mit dem eigentlichen Versuch begonnen werden, da jetzt $s>4f$ gewählt werden kann.
+Somit wählt man das erste $s$ und stellt den Abstand zwischen Gegenstand und Schirm auf der
+optischen Bank ein. Nun wird die Linse so verschoben, dass sich auf dem Schirm ein scharfes
+Abbild des Gegenstandes einstellt. Symmetrisch zum mittelpunkt von $s$ ist die zweite Position,
+an der die Linse auch ein scharfes Bild erzeugt. 
+
 
 \section{Messergebnisse und Auswertung}
 %//[ ] TODO: Messung - evtl. nur Verweis auf Messergebnisse
 % Eigentliche Messung!
 % Wie groß sind die Messunsicherheiten („Messfehler“)?
 
-Die Messwerte sind dem auf \url{https://eln.jku.at/} zugänglichen bzw. angehängten Laborprotokoll \glqq <>\grqq{} zu entnehmen.         %//[ ] TODO: Protokoll Dateiname anpassen
+Die Messwerte sind dem auf \url{https://eln.jku.at/} zugänglichen bzw. dem angehängten Laborprotokoll unter \ref{Anhang} zu entnehmen.         %//[x] TODO: Protokoll Dateiname anpassen
 
 %//[ ] TODO: Auswertung
 % evtl. Formeln, etc.
@@ -127,5 +150,8 @@ Die Messwerte sind dem auf \url{https://eln.jku.at/} zugänglichen bzw. angehän
 % zB Standardabweichung diskutieren, berechnete Größen nennen
 
 <>
+
+\section{Anhang}
+\label{sec:Anhang}
 
 \end{document}
