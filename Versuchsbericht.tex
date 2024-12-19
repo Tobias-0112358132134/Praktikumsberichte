@@ -66,11 +66,94 @@ das Bessel-Verfahren bestimmt werden.
 % (kurz!) Was muss ich über die zu messende Größe wissen?
 
 % Größe s beschreiben (Bezug auf optische bank)
-<>
+
+Das Bessel-Verfahren leitet sich aus der Annäherung an achsennahe Parallelstrahlen und einer dünnen Sammellinse ab.
+Diese Umstände sind annähernd erfüllt.
+Der genaue Ablauf des Verfahrens kann der Versuchsdurchführung \ref{sec:Durchfuehrung} entnommen werden.
+
+Die Formel zur Berechnung der Brennweite $f$ mit dem Bessel-Verfahren lautet:
+
+\begin{equation}
+    \label{eq:BesselBrennweite}
+    f = \frac{s^2 - e^2}{4s}
+\end{equation}
+
+wobei $s$ der Abstand zwischen Gegenstand und Schirm und $e$ der Abstand zwischen den beiden
+Positionen ($e_1$, $e_2$), an denen das Bild scharf ist, ist. Die Positionen $e_1$ und $e_2$
+sind dabei symmetrisch zum Mittelpunkt von $s$.
+
+Damit es tatsächlich zwei Positionen gibt, an denen ein scharfes Bild entsteht, muss der Gegenstand
+in beiden Positionen weiter als $f$ von der Linse entfernt sein. Daraus folgt die Bedingung $s>4f$.
+
+Als Anhaltspunkt für die Brennweite wird eine zweite Methode angewandt, die ein schnelles,
+aber ungenaues Ergebnis liefert: es wird ausgenutzt, dass sich Parallelstrahlen annähernd in einem Punkt schneiden, wenn sie durch eine
+Sammellinse fokussiert werden. Dieser Punkt ist der Brennpunkt der Linse und befindet sich in der Entfernung $f$
+von der Linse.
+
+\begin{equation}
+    \label{eq:BesselAbstand}
+    e = e_2 - e_1
+\end{equation}
+
+Da bei der Ermittlung der Position der Linse für eine Scharfstellung die Schärfe nur schwer (und nur subjektiv)
+beurteilt werden kann, wird je ein Intervall $[e_{i_\mathrm{links}};e_{i_\mathrm{rechts}}]$ für $e_1$ und
+$e_2$ bestimmt, in dem das Bild gerade noch scharf ist. Daraus wird $e_i$ folgendermaßen berechnet.
+
+\begin{equation}
+    \label{eq:BesselAbstandIntervall}
+    e_i = \frac{e_{i_\mathrm{rechts}} + e_{i_\mathrm{links}}}{2}
+\end{equation}
+
+Da die Größen $s$, $e_{i_\mathrm{rechts}}$ und $e_{i_\mathrm{links}}$ gemessen wurden, sind sie mit einer
+Messunsicherheit behaftet, deshalb wird die (Gauß'sche) Fortpflanzung von Unsicherheiten angewendet,
+um daraus die Unsicherheit der Brennweite $u_f$ zu berechnen. Diese lautet wie folgt:
+
+\begin{equation}
+    \label{eq:GaussUnsFortpfl}
+    u_f = \sqrt{\left(\frac{\partial f}{\partial s}\right)^2 \cdot u_s^2 + \left(\frac{\partial f}{\partial e}\right)^2 \cdot u_e^2}
+\end{equation}
+
+die partiellen Ableitungen lauten:
+
+\begin{equation}
+    \frac{\partial f}{\partial s} = \frac{s^2+e^2}{4s^2}
+\end{equation}
+
+\begin{equation}
+    \frac{\partial f}{\partial e} = -\frac{e}{2s}
+\end{equation}
+
+daraus ergibt sich eingesetzt in die Gleichung \ref{eq:GaussUnsFortpfl}
+
+\begin{equation}
+    \label{eq:BesselBrennwUnsFortpfl}
+    u_f(s,e) = \sqrt{\left(\frac{s^2+e^2}{4s^2}\right)^2 \cdot u_s^2 + \left(-\frac{e}{2s}\right)^2 \cdot u_e^2}
+\end{equation}
+
+Nun können die, aus den verschiedenen $s_i$ ermittelten, $f_i$ per gewichtetem Mittelwert zu einem
+mittleren $\bar{f_g}$ zusammengefasst werden. Die Gewichte $g_i$ entsprechen dabei den inversen
+Varianzen.
+
+\begin{equation}
+    \label{eq:Gewicht}
+    g_i = \frac{1}{u_{f_i}^2}
+\end{equation}
+
+\begin{equation}
+    \label{eq:Mittelwert}
+    \bar{f_g} = \frac{\sum_{i=1}^{N} g_i \cdot f_i}{\sum_{i=1}^{N} g_i}
+\end{equation}
+
+Dieser gewichtete Mittelwert verfügt auch über eine gewichtete Unsicherheit $u_{\bar{f_g}}$.
+
+\begin{equation}
+    \label{eq:GewichtUnsicherheit}
+    u_{\bar{f_g}} = \sqrt{\frac{1}{\sum_{i=1}^{N} g_i}}
+\end{equation}
 
 \section{Versuchsbeschreibung}
 \subsection{Versuchsaufbau}
-%//[ ] TODO: Versuchsaufbau
+%//[x] TODO: Versuchsaufbau
 % Wie sieht der Versuchsaufbau aus? (Skizze, Anleitung, Geräte, …)
 % auf Abbildungen Bezug nehmen
 
@@ -79,7 +162,7 @@ Der Versuch wurde am 13.12.2024 im Praktikumsraum P122 an der JKU in Linz zwisch
 
 Für diesen Versuch wurden eine Sammellinse, ein Lineal, eine optische Bank (mit Reitern, LED
 mit Kondensorlinse, Geodreieck als Objekt und Schirm) bereitgestellt.
-Weiters stand ein Laptop zur Führung des Laborprotokolls bereit und zur Dokumentation der Werte.
+Weiters stand ein Laptop zur Führung des Laborprotokolls und zur Dokumentation der Werte bereit.
 In der nachstehenden Abbildung \ref{Abb:Versuchsaufbau1} ist der Aufbau des Versuches dargestellt.
 Dabei ist zu erkennen, dass von links weg eine LED mit Kondensorlinse, danach der Objektträger
 mit Geodreieck und darauffolgend eine Linse, vor dem sich ganz rechts befindenden Schirm auf der
@@ -94,6 +177,7 @@ optischen Bank angeordnet sind.
 \end{figure}
 
 \subsection{Durchführung}
+\label{sec:Durchfuehrung}
 %//[ ] TODO: Durchführung
 % Wie wurde der Versuch durchgeführt bzw. ausgewertet?
 % auch wann und wo?
@@ -106,18 +190,55 @@ der Linse und beträgt ungefähr 9,6cm $\pm\:1\mathrm{cm}$. Dies kann man sagen,
 zur Deckenleuchte im Verhältnis zum Abstand der Abbildung zur Linse hinreichend groß ist.
 
 Nun kann mit dem eigentlichen Versuch begonnen werden, da jetzt $s>4f$ gewählt werden kann.
-Somit wählt man das erste $s$ und stellt den Abstand zwischen Gegenstand und Schirm auf der
+Nach Festlegung des ersten $s$ stellt man diesen Abstand zwischen Gegenstand und Schirm auf der
 optischen Bank ein. Nun wird die Linse so verschoben, dass sich auf dem Schirm ein scharfes
-Abbild des Gegenstandes einstellt. Symmetrisch zum mittelpunkt von $s$ ist die zweite Position,
-an der die Linse auch ein scharfes Bild erzeugt. 
+Abbild des Gegenstandes zeigt. Die zweite Position, an der die Linse auch ein scharfes Bild erzeugt
+befindet sich symmetrisch zum Mittelpunkt von $s$.
 
+Die Messung wird für verschiedene $s$ wiederholt, um eine möglichst genaue Bestimmung der Brennweite
+zu erhalten. Die Messwerte werden im angehängten Laborprotokoll festgehalten.
 
 \section{Messergebnisse und Auswertung}
 %//[ ] TODO: Messung - evtl. nur Verweis auf Messergebnisse
 % Eigentliche Messung!
 % Wie groß sind die Messunsicherheiten („Messfehler“)?
 
-Die Messwerte sind dem auf \url{https://eln.jku.at/} zugänglichen bzw. dem angehängten Laborprotokoll unter \ref{Anhang} zu entnehmen.         %//[x] TODO: Protokoll Dateiname anpassen
+Die Messwerte sind dem auf \url{https://eln.jku.at/} zugänglichen bzw. angehängten Laborprotokoll unter \ref{sec:Anhang} zu entnehmen.         %//[x] TODO: Protokoll Dateiname anpassen
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c}
+		$s$ /cm & $e_1$ /cm & $e_2$ /cm & $e$ /cm \\ \hline
+		45.0 & $14,30\pm0,05$ & $30,85\pm0,05$ & $16,55\pm0,1$ \\
+		50.0 & $13,10\pm0,05$ & $36,75\pm0,05$ & $23,65\pm0,1$ \\
+		55.0 & $12,65\pm0,05$ & $42,35\pm0,05$ & $29,70\pm0,1$ \\
+		60.0 & $12,30\pm0,05$ & $48,80\pm0,05$ & $36,10\pm0,1$ \\
+		65.0 & $11,70\pm0,05$ & $54,00\pm0,05$ & $42,30\pm0,1$ \\
+	\end{tabular}
+    \caption{Ermittlung von $e$}
+\end{table}
+
+
+Dabei werden die Größen $s$, $e_1$, $e_2$ von der optischen Bank abgelesen, welche über ein kleinstes Skalenteil
+von 1mm verfügt. Die Unsicherheit der Messung beträgt somit $\pm 0,5\mathrm{mm}$. Übersetzt auf eine äquivalente
+Normalverteilung ergibt sich eine Standardabweichung von $\sigma = 0,5\mathrm{mm} / \sqrt{3} \approx 0,29\mathrm{mm}$.
+
+Jedoch ist es schwierig, genau zu entscheiden, an welcher Stelle das Bild scharf ist. Deshalb wird jeweils für $e_1$
+und $e_2$ ein ein Intervall bestimmt, dessen unteres Ende ein gerade noch nicht scharfes Bild und dessen oberes
+Ende ein gerade noch scharfes Bild zeigt. Somit wurde ein Vertrauensintervall ähnlich dem einer Normalverteilung
+gewählt.
+
+Es lohnt sich, diese beiden Intervalle von $e_1$ und $e_2$ als nächstes auf ein Intervall für $e$ zusammenzufassen.
+Wenn hier $e_1$ die linke Position und $e_2$ die rechte Position ist, wird das untere Ende des Intervalls für $e$
+durch das untere Ende von $e_2$ minus das obere Ende von $e_1$ und das obere Ende des Intervalls für $e$ durch
+das obere Ende von $e_2$ minus das untere Ende von $e_1$ bestimmt. %//[ ] ?
+
+Es bleibt zu entscheiden, ob dieses Intervall als einfaches, zweifaches oder n-faches Vertrauensintervall
+interpretiert wird. Für diese Entscheidung kann man den Wert der Wahrscheinlichkeit $P$ heranziehen, der angibt,
+wie wahrscheinlich es ist, dass der wahre Wert innerhalb des Intervalls liegt. Für ein einfaches Vertrauensintervall
+gilt $P = 0,68$, für ein zweifaches $P = 0,95$ und für ein dreifaches $P = 0,997$. %//[ ] wir wählen wasfüreins?
+
+
 
 %//[ ] TODO: Auswertung
 % evtl. Formeln, etc.
