@@ -97,15 +97,29 @@ von der Linse.
 
 Da bei der Ermittlung der Position der Linse für eine Scharfstellung die Schärfe nur schwer (und nur subjektiv)
 beurteilt werden kann, wird je ein Intervall $[e_{i_\mathrm{links}};e_{i_\mathrm{rechts}}]$ für $e_1$ und
-$e_2$ bestimmt, in dem das Bild gerade noch scharf ist. Daraus wird $e_i$ folgendermaßen berechnet.
+$e_2$ bestimmt, in dem das Bild gerade noch scharf ist. Daraus wird $e_{i_\mathrm{Mitte}}$ folgendermaßen berechnet.
 
 \begin{equation}
     \label{eq:BesselAbstandIntervall}
-    e_i = \frac{e_{i_\mathrm{rechts}} + e_{i_\mathrm{links}}}{2}
+    e_{i_\mathrm{Mitte}} = \frac{e_{i_\mathrm{rechts}} + e_{i_\mathrm{links}}}{2}
 \end{equation}
 
 Da die Größen $s$, $e_{i_\mathrm{rechts}}$ und $e_{i_\mathrm{links}}$ gemessen wurden, sind sie mit einer
-Messunsicherheit behaftet, deshalb wird die (Gauß'sche) Fortpflanzung von Unsicherheiten angewendet,
+Messunsicherheit behaftet. 
+
+%//[ ] in Grundlagen nur Existenz von Unsicherheiten erwähnen, nicht wie sie berechnet werden? (-> Auswertung?)
+
+Da aus $e_{i_\mathrm{rechts}}$ und $e_{i_\mathrm{links}}$, die ein Vertrauensintervall beschreiben, aber eine
+deutlich einflussreichere Unsicherheit für $e_i$ um $e_{i_\mathrm{Mitte}}$ ermittelt werden kann, lautet die
+Unsicherheit $u_{e_i}$ mit interpretation als n-faches Vertrauensintervall folgendermaßen:
+
+\begin{equation}
+    \label{eq:BesselAbstandUnsicherheit}
+    u_{e_i} = \frac{e_{i_\mathrm{rechts}} - e_{i_\mathrm{links}}}{2\cdot n}
+\end{equation}
+
+
+deshalb wird die (Gauß'sche) Fortpflanzung von Unsicherheiten angewendet,
 um daraus die Unsicherheit der Brennweite $u_f$ zu berechnen. Diese lautet wie folgt:
 
 \begin{equation}
@@ -218,6 +232,7 @@ Die Messwerte sind dem auf \url{https://eln.jku.at/} zugänglichen bzw. angehän
     \caption{Ermittlung von $e$}
 \end{table}
 
+%//[ ] Unsicherheiten von e_i eigentlich aus Intervalllänge
 
 Dabei werden die Größen $s$, $e_1$, $e_2$ von der optischen Bank abgelesen, welche über ein kleinstes Skalenteil
 von 1mm verfügt. Die Unsicherheit der Messung beträgt somit $\pm 0,5\mathrm{mm}$. Übersetzt auf eine äquivalente
