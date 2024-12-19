@@ -110,16 +110,31 @@ Messunsicherheit behaftet.
 %//[ ] in Grundlagen nur Existenz von Unsicherheiten erwähnen, nicht wie sie berechnet werden? (-> Auswertung?)
 
 Da aus $e_{i_\mathrm{rechts}}$ und $e_{i_\mathrm{links}}$, die ein Vertrauensintervall beschreiben, aber eine
-deutlich einflussreichere Unsicherheit für $e_i$ um $e_{i_\mathrm{Mitte}}$ ermittelt werden kann, lautet die
-Unsicherheit $u_{e_i}$ mit interpretation als n-faches Vertrauensintervall folgendermaßen:
+deutlich einflussreichere Unsicherheit für $e_i$ (um $e_{i_\mathrm{Mitte}}$) ermittelt werden kann, wird die Unsicherheit
+für $e_i$ aus der Intervalllänge abgeleitet.
+Da anschließend $e$ aus $e_1$ und $e_2$ berechnet wird, entspricht die Unsicherheit von $e$ der Kombination der
+Unsicherheiten von $e_1$ und $e_2$.
+Da zwischen $e_1$ und $e_2$ der geometrische Zusammenhang besteht, dass die Positionen symmetrisch zum Mittelpunkt
+von $s$ liegen, wird von korrelierten Größen ausgegangen und die Unsicherheiten werden addiert:
+%//[ ] -> nach diesem Argument, sind aber auch e und s korreliert,
+%         also müsste man dann auch die normale Fehlerfortpflanzung anwenden?
+
+% ---|--*e1*--|----------|--*e2*--|---
+
+% e1 3sigma -> sigm_e1 0,2
+% e2 3sigma -> sigm_e2 0,2
+
+% e? max (e2+sigm_e2)-(e1-sigm_e1) = e2+sigm_e2-e1+sigm_e1 = e2-e1 + sigm_e2+sigm_e1 = e + (sigm_e2+sigm_e1) =: e + sigm_e
+%    min (e2-sigm_e2)-(e1+sigm_e1) = e2-sigm_e2-e1-sigm_e1 = e2-e1 - sigm_e2-sigm_e1 = e - (sigm_e2+sigm_e1) =: e - sigm_e
+
 
 \begin{equation}
-    \label{eq:BesselAbstandUnsicherheit}
-    u_{e_i} = \frac{e_{i_\mathrm{rechts}} - e_{i_\mathrm{links}}}{2\cdot n}
+    \label{eq:UnkorrUnsFortpfl}
+    u_e=u_{e_1}+u_{e_2}
 \end{equation}
 
-
-deshalb wird die (Gauß'sche) Fortpflanzung von Unsicherheiten angewendet,
+%//[ ] wirklich Gauß?
+Für die Brennweite wird die (Gauß'sche) Fortpflanzung von Unsicherheiten angewendet,
 um daraus die Unsicherheit der Brennweite $u_f$ zu berechnen. Diese lautet wie folgt:
 
 \begin{equation}
@@ -182,6 +197,11 @@ Dabei ist zu erkennen, dass von links weg eine LED mit Kondensorlinse, danach de
 mit Geodreieck und darauffolgend eine Linse, vor dem sich ganz rechts befindenden Schirm auf der
 optischen Bank angeordnet sind.
 
+Die einzelnen optischen Elemente (insbesondere Lampe und Linse) sollten beim Aufbau auf Parallelität
+ausgerichtet werden. Dabei hilft es, die Lampe einzuschalten und dann das durch die Linse auf den
+Schirm geworfene Lichtmuster zu beobachten. Wenn die Linse und die Lampe parallel zueinander sind,
+sollte das Lichtmuster auf dem Schirm kreisförmig sein.
+
 % Bild vom Versuchsaufbau
 \begin{figure}[H]
     \centering
@@ -207,9 +227,13 @@ Nun kann mit dem eigentlichen Versuch begonnen werden, da jetzt $s>4f$ gewählt 
 Nach Festlegung des ersten $s$ stellt man diesen Abstand zwischen Gegenstand und Schirm auf der
 optischen Bank ein. Nun wird die Linse so verschoben, dass sich auf dem Schirm ein scharfes
 Abbild des Gegenstandes zeigt. Die zweite Position, an der die Linse auch ein scharfes Bild erzeugt
-befindet sich symmetrisch zum Mittelpunkt von $s$.
+befindet sich symmetrisch zum Mittelpunkt von $s$. 
 
-Die Messung wird für verschiedene $s$ wiederholt, um eine möglichst genaue Bestimmung der Brennweite
+Jedoch ist es schwierig, genau zu entscheiden, an welcher Stelle das Bild scharf ist. Deshalb wird jeweils für 
+die Positionen ein ein Intervall bestimmt, dessen unteres Ende ein gerade noch nicht scharfes Bild und dessen oberes
+Ende ein gerade nicht mehr scharfes Bild zeigt. Somit wurde ein Vertrauensintervall gewählt.
+
+Die Messungen werden für verschiedene $s$ wiederholt, um eine genauere Bestimmung der Brennweite
 zu erhalten. Die Messwerte werden im angehängten Laborprotokoll festgehalten.
 
 \section{Messergebnisse und Auswertung}
@@ -219,62 +243,67 @@ zu erhalten. Die Messwerte werden im angehängten Laborprotokoll festgehalten.
 
 Die Messwerte sind dem auf \url{https://eln.jku.at/} zugänglichen bzw. angehängten Laborprotokoll unter \ref{sec:Anhang} zu entnehmen.         %//[x] TODO: Protokoll Dateiname anpassen
 
-\begin{table}[H]
-	\centering
-	\begin{tabular}{c|c|c|c}
-		$s$ /cm & $e_1$ /cm & $e_2$ /cm & $e$ /cm \\ \hline
-		45.0 & $14,30\pm0,05$ & $30,85\pm0,05$ & $16,55\pm0,1$ \\
-		50.0 & $13,10\pm0,05$ & $36,75\pm0,05$ & $23,65\pm0,1$ \\
-		55.0 & $12,65\pm0,05$ & $42,35\pm0,05$ & $29,70\pm0,1$ \\
-		60.0 & $12,30\pm0,05$ & $48,80\pm0,05$ & $36,10\pm0,1$ \\
-		65.0 & $11,70\pm0,05$ & $54,00\pm0,05$ & $42,30\pm0,1$ \\
-	\end{tabular}
-    \caption{Ermittlung von $e$}
-\end{table}
-
-%//[ ] Unsicherheiten von e_i eigentlich aus Intervalllänge
-
-Dabei werden die Größen $s$, $e_1$, $e_2$ von der optischen Bank abgelesen, welche über ein kleinstes Skalenteil
-von 1mm verfügt. Die Unsicherheit der Messung beträgt somit $\pm 0,5\mathrm{mm}$. Übersetzt auf eine äquivalente
-Normalverteilung ergibt sich eine Standardabweichung von $\sigma = 0,5\mathrm{mm} / \sqrt{3} \approx 0,29\mathrm{mm}$.
-
-Jedoch ist es schwierig, genau zu entscheiden, an welcher Stelle das Bild scharf ist. Deshalb wird jeweils für $e_1$
-und $e_2$ ein ein Intervall bestimmt, dessen unteres Ende ein gerade noch nicht scharfes Bild und dessen oberes
-Ende ein gerade noch scharfes Bild zeigt. Somit wurde ein Vertrauensintervall ähnlich dem einer Normalverteilung
-gewählt.
-
-Es lohnt sich, diese beiden Intervalle von $e_1$ und $e_2$ als nächstes auf ein Intervall für $e$ zusammenzufassen.
-Wenn hier $e_1$ die linke Position und $e_2$ die rechte Position ist, wird das untere Ende des Intervalls für $e$
-durch das untere Ende von $e_2$ minus das obere Ende von $e_1$ und das obere Ende des Intervalls für $e$ durch
-das obere Ende von $e_2$ minus das untere Ende von $e_1$ bestimmt. %//[ ] ?
-
-Es bleibt zu entscheiden, ob dieses Intervall als einfaches, zweifaches oder n-faches Vertrauensintervall
-interpretiert wird. Für diese Entscheidung kann man den Wert der Wahrscheinlichkeit $P$ heranziehen, der angibt,
-wie wahrscheinlich es ist, dass der wahre Wert innerhalb des Intervalls liegt. Für ein einfaches Vertrauensintervall
-gilt $P = 0,68$, für ein zweifaches $P = 0,95$ und für ein dreifaches $P = 0,997$. %//[ ] wir wählen wasfüreins?
-
-
-
 %//[ ] TODO: Auswertung
 % evtl. Formeln, etc.
 % auf richtiges Runden der Werte achten
 % evtl. auf Gleichungen Bezug nehmen
 
+Die Größe $s$ wurde mit einer Unsicherheit von $\pm 0,5\mathrm{mm}$ gemessen. Übersetzt auf eine äquivalente
+Normalverteilung ergibt sich eine Standardabweichung von $\sigma = 0,5\mathrm{mm} / \sqrt{3} \approx 0,03\mathrm{cm}$.
+Im Gegensatz dazu wurden die Größen $e_1$ und $e_2$ mit einer Unsicherheit aus der Intervalllänge
+ermittelt. Es wurde geschätzt, dass die Position, die ein tatsächlich scharfes Bild zeigt, mit einer
+hohen Wahrscheinlichkeit (fast 100\%-ig sicher) innerhalb des Intervalls liegt. Somit kann das 
+Intervall als $3\sigma$-Intervall ($n=3$) interpretiert werden. Dieses $\sigma\widehat{=}u_{e_i}$ ergibt sich aus:
+
 \begin{equation}
-    \label{Gl1}
-    x = x
+    \label{eq:BesselAbstandUnsicherheit}
+    u_{e_i} = \frac{e_{i_\mathrm{rechts}} - e_{i_\mathrm{links}}}{2\cdot n}
 \end{equation}
 
-\vspace{0,5cm}
+Die Unsicherheit von $e$ entspricht der Kombination der Unsicherheiten von $e_1$ und $e_2$, siehe Gleichung \ref{eq:UnkorrUnsFortpfl}
 
+Die Werte der Unsicherheiten sind folgender Tabelle zu entnehmen:
 
-% Diagramm(e) der Auswertung
-\begin{figure}[H]
-    \label{AbbAuswertung1}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c}
+		$s$ /cm & $e_1$ /cm & $e_2$ /cm & $e$ /cm \\ \hline
+		$45.0\pm0,03$ & $14,30\pm0,20$ & $30,85\pm0,12$ & $16,55\pm0,32$ \\
+		$50.0\pm0,03$ & $13,10\pm0,17$ & $36,75\pm0,08$ & $23,65\pm0,25$ \\
+		$55.0\pm0,03$ & $12,65\pm0,22$ & $42,35\pm0,05$ & $29,70\pm0,27$ \\
+		$60.0\pm0,03$ & $12,30\pm0,13$ & $48,80\pm0,07$ & $36,10\pm0,20$ \\
+		$65.0\pm0,03$ & $11,70\pm0,10$ & $54,00\pm0,07$ & $42,30\pm0,17$ \\
+	\end{tabular}
+    \caption{Ermittlung von $e$, Unsicherheiten}
+\end{table}
+
+Wenn man nun in die Gleichung \ref{eq:BesselBrennweite} die Werte für $s$ und $e$ eingesetzt, erhält man die Brennweite $f$.
+Zusammen mit der Unsicherheit $u_f$ aus der Gleichung \ref{eq:BesselBrennwUnsFortpfl} ergibt sich folgende Tabelle:
+
+\begin{table}[H]
     \centering
-    \includegraphics[width=\textwidth]{bilder/Diagramm1.png}        %// [ ] TODO: Diagramm Bild anpassen
-    \caption{<>}                                                    %// [ ] TODO: Diagramm Bildunterschrift anpassen
-\end{figure}
+    \begin{tabular}{c|c|c}
+        $s$ /cm & $f$ /cm & $u_f$ /cm \\ \hline
+        $45.0\pm0,03$ & $9,73$ & $0,06$ \\
+        $50.0\pm0,03$ & $9,70$ & $0,06$ \\
+        $55.0\pm0,03$ & $9,74$ & $0,08$ \\
+        $60.0\pm0,03$ & $9,57$ & $0,07$ \\
+        $65.0\pm0,03$ & $9,37$ & $0,06$ \\
+    \end{tabular}
+    \caption{Brennweite $f$ und Unsicherheit $u_f$}
+\end{table}
+
+Mit $f$ und $u_f$ können nun der gewichtete Mittelwert $\bar{f_g}$ und die gewichtete Unsicherheit $u_{\bar{f_g}}$
+nach den Gleichungen \ref{eq:Mittelwert} und \ref{eq:GewichtUnsicherheit} berechnet werden.
+
+\begin{equation*}
+    \bar{f_g} = 9,606\mathrm{cm}
+\end{equation*}
+
+\begin{equation*}
+    u_{\bar{f_g}} = 0,028\mathrm{cm}
+\end{equation*}
+
 
 \section{Diskussion}
 %//[ ] TODO: Diskussion
@@ -285,9 +314,68 @@ gilt $P = 0,68$, für ein zweifaches $P = 0,95$ und für ein dreifaches $P = 0,9
 % ursprüngliche Fragestellung diskutieren
 % zB Standardabweichung diskutieren, berechnete Größen nennen
 
-<>
+Der gewichtet Mittelwert der Brennweite $\bar{f_g} = 9,606\mathrm{cm}$ stimmt überein mit der grob abgeschätzten
+Brennweite, die zu Beginn des Versuches ermittelt wurde. Die Unsicherheit $u_{\bar{f_g}} = 0,028\mathrm{cm}$ ist
+dafür, dass nur bei fünf verschieden $s$ gemessen wurde, relativ klein.
+Somit lässt sich das Bessel-Verfahren als geeignete Methode zur Bestimmung der Brennweite einer Sammellinse
+bezeichnen.
+
+Trotzdem hätte ein größerer Datensatz zu einer aussagekräftigeren Bestimmung der Brennweite geführt.
+Auch bei der Bestimmung der Intervallsgrenzen $e_{i_\mathrm{links}}$ und $e_{i_\mathrm{rechts}}$ war
+die subjektive Einschätzung der Schärfe des Bildes ein Faktor, der Einfluss auf die Ergebnisse hatte.
+Es hätte auch besser darauf geachtet werden sollen, dass die Schärfe wirklich nur von einer
+Experimentatorin beurteilt wird und nicht von einer zweiten Person beeinflusst wird.\\
+Eine objektivere Methode, um die Schärfe des Bildes zu bestimmen oder eine genauere Definition von
+Schärfe, hätte die Ergebnisse wahrscheinlich verbessert.
+
+Beim Versuch wurde als größtes $s$ der Wert $65,0\mathrm{cm}$ gewählt. Dieser Wert ist relativ groß,
+was sich beim beurteilen der Schärfe äußerte. Bei größeren $s$ ist das Bild mit der Linse bei $e_2$
+sehr klein und es ist schwieriger, die Schärfe zu beurteilen. Eine Wahl von kleineren $s$ hätte
+diese Problematik verringert.
+
+In diesem Versuch wurde die Unsicherheit der Beurteilung der Schärfe durch Vertrauensintervalle
+abgeschätzt. Eine alternative Methode wäre die Bestimmung der Unsicherheit durch die Wiederholung
+der Messung gewesen. Es bleibt offen, welche Methode die besseren Ergebnisse liefert, da in diesem
+Versuch nur eine Methode angewandt wurde.
+
+
+\newpage
 
 \section{Anhang}
 \label{sec:Anhang}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{bilder/Protokoll_Bilder/Protokoll1.png}
+    \caption{Laborprotokoll Seite 1}
+    \label{fig:Protokoll1}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{bilder/Protokoll_Bilder/Protokoll2.png}
+    \caption{Laborprotokoll Seite 2}
+    \label{fig:Protokoll2}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{bilder/Protokoll_Bilder/Protokoll3.png}
+    \caption{Laborprotokoll Seite 3}
+    \label{fig:Protokoll3}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{bilder/Protokoll_Bilder/Protokoll4.png}
+    \caption{Laborprotokoll Seite 4}
+    \label{fig:Protokoll4}
+\end{figure}
 
 \end{document}
