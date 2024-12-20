@@ -90,6 +90,8 @@ aber ungenaues Ergebnis liefert: es wird ausgenutzt, dass sich Parallelstrahlen 
 Sammellinse fokussiert werden. Dieser Punkt ist der Brennpunkt der Linse und befindet sich in der Entfernung $f$
 von der Linse.
 
+Der Abstand $e$ folgt aus den Positionen.
+
 \begin{equation}
     \label{eq:BesselAbstand}
     e = e_2 - e_1
@@ -185,8 +187,8 @@ optischen Bank angeordnet sind.
 
 Die einzelnen optischen Elemente (insbesondere Lampe und Linse) sollten beim Aufbau auf Parallelität
 ausgerichtet werden. Dabei hilft es, die Lampe einzuschalten und dann das durch die Linse auf den
-Schirm geworfene Lichtmuster zu beobachten. Wenn die Linse und die Lampe parallel zueinander sind,
-sollte das Lichtmuster auf dem Schirm kreisförmig sein.
+Schirm geworfene Lichtmuster zu beobachten. Wenn die Achse der Linse und der Lampe parallel zueinander
+sind, sollte das Lichtmuster auf dem Schirm kreisförmig sein.
 
 % Bild vom Versuchsaufbau
 \begin{figure}[H]
@@ -206,8 +208,8 @@ Vor dem tatsächlichen Versuch wurde zuerst die Brennweite der Linse grob abgesc
 Dabei wurde die Linse über den Labortisch gehalten und so lange auf und ab bewegt, bis das
 Abbild der Deckenbeleuchtung scharf erkennbar war. Der Abstand zwischen Linse und Abbildung
 wurde dann mit dem Lineal abgemessen. Dieser Abstand entspricht annähernd der Brennweite
-der Linse und beträgt ungefähr 9,6cm $\pm\:1\mathrm{cm}$. Dies kann man sagen, da der Abstand
-zur Deckenleuchte im Verhältnis zum Abstand der Abbildung zur Linse hinreichend groß ist.
+der Linse. Dies kann man sagen, da der Abstand zur Deckenleuchte im Verhältnis zum Abstand
+der Abbildung zur Linse hinreichend groß ist.
 
 Nun kann mit dem eigentlichen Versuch begonnen werden, da jetzt $s>4f$ gewählt werden kann.
 Nach Festlegung des ersten $s$ stellt man diesen Abstand zwischen Gegenstand und Schirm auf der
@@ -234,8 +236,11 @@ Die Messwerte sind dem auf \url{https://eln.jku.at/} zugänglichen bzw. angehän
 % auf richtiges Runden der Werte achten
 % evtl. auf Gleichungen Bezug nehmen
 
+Die Abschätzung der Brennweite ergab einen Wert von 9,6cm $\pm\:1\mathrm{cm}$. Dieser Wert wurde
+erlaubt es nun, $s>4f$ zu wählen.
+
 Die Größe $s$ wurde mit einer Unsicherheit von $\pm 0,5\mathrm{mm}$ gemessen. Übersetzt auf eine äquivalente
-Normalverteilung ergibt sich eine Standardabweichung von $\sigma = 0,5\mathrm{mm} / \sqrt{3} \approx 0,03\mathrm{cm}$.
+Normalverteilung ergibt sich eine Standardabweichung von $0,5\mathrm{mm} / \sqrt{3} \approx 0,03\mathrm{cm}$.
 Im Gegensatz dazu wurden die Größen $e_1$ und $e_2$ mit einer Unsicherheit aus der Intervalllänge
 ermittelt. Es wurde geschätzt, dass die Position, die ein tatsächlich scharfes Bild zeigt, mit einer
 hohen Wahrscheinlichkeit (fast 100\%-ig sicher) innerhalb des Intervalls liegt. Somit kann das 
@@ -263,7 +268,7 @@ Die Werte der Unsicherheiten sind folgender Tabelle zu entnehmen:
     \caption{Ermittlung von $e$, Unsicherheiten}
 \end{table}
 
-Wenn man nun in die Gleichung \ref{eq:BesselBrennweite} die Werte für $s$ und $e$ eingesetzt, erhält man die Brennweite $f$.
+Wenn man nun in die Gleichung \ref{eq:BesselBrennweite} die Werte für $s$ und $e$ einsetzt, erhält man die Brennweite $f$.
 Zusammen mit der Unsicherheit $u_f$ aus der Gleichung \ref{eq:BesselBrennwUnsFortpfl} ergibt sich folgende Tabelle:
 
 \begin{table}[H]
@@ -300,8 +305,8 @@ nach den Gleichungen \ref{eq:Mittelwert} und \ref{eq:GewichtUnsicherheit} berech
 % ursprüngliche Fragestellung diskutieren
 % zB Standardabweichung diskutieren, berechnete Größen nennen
 
-Der gewichtet Mittelwert der Brennweite $\bar{f_g} = 9,606\mathrm{cm}$ stimmt überein mit der grob abgeschätzten
-Brennweite, die zu Beginn des Versuches ermittelt wurde. Die Unsicherheit $u_{\bar{f_g}} = 0,028\mathrm{cm}$ ist
+Der gewichtet Mittelwert der Brennweite $\bar{f_g} = 9,601\mathrm{cm}$ stimmt überein mit der grob abgeschätzten
+Brennweite, die zu Beginn des Versuches ermittelt wurde. Die Unsicherheit $u_{\bar{f_g}} = 0,021\mathrm{cm}$ ist
 dafür, dass nur bei fünf verschieden $s$ gemessen wurde, relativ klein.
 Somit lässt sich das Bessel-Verfahren als geeignete Methode zur Bestimmung der Brennweite einer Sammellinse
 bezeichnen.
@@ -321,7 +326,7 @@ diese Problematik verringert.
 
 In diesem Versuch wurde die Unsicherheit der Beurteilung der Schärfe durch Vertrauensintervalle
 abgeschätzt. Eine alternative Methode wäre die Bestimmung der Unsicherheit durch die Wiederholung
-der Messung gewesen. Es bleibt offen, welche Methode die besseren Ergebnisse liefert, da in diesem
+der Messungen gewesen. Es bleibt offen, welche Methode die besseren Ergebnisse liefert, da in diesem
 Versuch nur eine Methode angewandt wurde.
 
 
