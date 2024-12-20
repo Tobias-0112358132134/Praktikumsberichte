@@ -22,9 +22,9 @@
 \begin{document}
 \begin{titlepage}
     \centering
-    \includegraphics[scale = 0.03]{bilder/JKU_Logo.png}\\[1.0 cm]	% JKU Logo
-    \textsc{\Large Einführungspraktikum Physik}\\[0.5 cm]	        % LVA Name
-    \textsc{\large 3. Versuch}\\[0.5 cm]				            % Versuch Nummer    // [x] TODO: Versuch Nummer anpassen
+    \includegraphics[scale = 0.03]{bilder/JKU_Logo.png}\\[1.0 cm]   % JKU Logo
+    \textsc{\Large Einführungspraktikum Physik}\\[0.5 cm]           % LVA Name
+    \textsc{\large 3. Versuch}\\[0.5 cm]                            % Versuch Nummer    // [x] TODO: Versuch Nummer anpassen
     \rule{\linewidth}{0.4 mm} \\[0.4 cm]
     { \huge \bfseries Brennweite}\\                                 % Versuch Name      // [x] TODO: Versuch Name anpassen
     \rule{\linewidth}{0.4 mm} \\[1.5 cm]
@@ -55,14 +55,14 @@
 
 %%%%%%%%%%%%%%% Inhalt %%%%%%%%%%%%%%%
 \section{Einleitung}
-%//[ ] TODO: Einleitung
+%//[x] TODO: Einleitung
 % Was soll gemessen werden? (Ziel / Motivation / Hypothese / erwartetes Ergebnis)
 
 In diesem Versuch soll die Brennweite und die zugehörige Unsicherheit einer Sammellinse durch 
 das Bessel-Verfahren bestimmt werden.
 
 \section{Grundlagen}
-%//[ ] TODO: Grundlagen
+%//[x] TODO: Grundlagen
 % (kurz!) Was muss ich über die zu messende Größe wissen?
 
 % Größe s beschreiben (Bezug auf optische bank)
@@ -107,34 +107,20 @@ $e_2$ bestimmt, in dem das Bild gerade noch scharf ist. Daraus wird $e_{i_\mathr
 Da die Größen $s$, $e_{i_\mathrm{rechts}}$ und $e_{i_\mathrm{links}}$ gemessen wurden, sind sie mit einer
 Messunsicherheit behaftet. 
 
-%//[ ] in Grundlagen nur Existenz von Unsicherheiten erwähnen, nicht wie sie berechnet werden? (-> Auswertung?)
-
 Da aus $e_{i_\mathrm{rechts}}$ und $e_{i_\mathrm{links}}$, die ein Vertrauensintervall beschreiben, aber eine
 deutlich einflussreichere Unsicherheit für $e_i$ (um $e_{i_\mathrm{Mitte}}$) ermittelt werden kann, wird die Unsicherheit
 für $e_i$ aus der Intervalllänge abgeleitet.
 Da anschließend $e$ aus $e_1$ und $e_2$ berechnet wird, entspricht die Unsicherheit von $e$ der Kombination der
 Unsicherheiten von $e_1$ und $e_2$.
-Da zwischen $e_1$ und $e_2$ der geometrische Zusammenhang besteht, dass die Positionen symmetrisch zum Mittelpunkt
-von $s$ liegen, wird von korrelierten Größen ausgegangen und die Unsicherheiten werden addiert:
-%//[ ] -> nach diesem Argument, sind aber auch e und s korreliert,
-%         also müsste man dann auch die normale Fehlerfortpflanzung anwenden?
-
-% ---|--*e1*--|----------|--*e2*--|---
-
-% e1 3sigma -> sigm_e1 0,2
-% e2 3sigma -> sigm_e2 0,2
-
-% e? max (e2+sigm_e2)-(e1-sigm_e1) = e2+sigm_e2-e1+sigm_e1 = e2-e1 + sigm_e2+sigm_e1 = e + (sigm_e2+sigm_e1) =: e + sigm_e
-%    min (e2-sigm_e2)-(e1+sigm_e1) = e2-sigm_e2-e1-sigm_e1 = e2-e1 - sigm_e2-sigm_e1 = e - (sigm_e2+sigm_e1) =: e - sigm_e
+Sie werden quadratisch addiert:
 
 
 \begin{equation}
     \label{eq:UnkorrUnsFortpfl}
-    u_e=u_{e_1}+u_{e_2}
+    u_e=\sqrt{u_{e_1}^2+u_{e_2}^2}
 \end{equation}
 
-%//[ ] wirklich Gauß?
-Für die Brennweite wird die (Gauß'sche) Fortpflanzung von Unsicherheiten angewendet,
+Für die Brennweite wird auch die (Gauß'sche) Fortpflanzung von Unsicherheiten angewendet,
 um daraus die Unsicherheit der Brennweite $u_f$ zu berechnen. Diese lautet wie folgt:
 
 \begin{equation}
@@ -212,7 +198,7 @@ sollte das Lichtmuster auf dem Schirm kreisförmig sein.
 
 \subsection{Durchführung}
 \label{sec:Durchfuehrung}
-%//[ ] TODO: Durchführung
+%//[x] TODO: Durchführung
 % Wie wurde der Versuch durchgeführt bzw. ausgewertet?
 % auch wann und wo?
 
@@ -237,13 +223,13 @@ Die Messungen werden für verschiedene $s$ wiederholt, um eine genauere Bestimmu
 zu erhalten. Die Messwerte werden im angehängten Laborprotokoll festgehalten.
 
 \section{Messergebnisse und Auswertung}
-%//[ ] TODO: Messung - evtl. nur Verweis auf Messergebnisse
+%//[x] TODO: Messung - evtl. nur Verweis auf Messergebnisse
 % Eigentliche Messung!
 % Wie groß sind die Messunsicherheiten („Messfehler“)?
 
 Die Messwerte sind dem auf \url{https://eln.jku.at/} zugänglichen bzw. angehängten Laborprotokoll unter \ref{sec:Anhang} zu entnehmen.         %//[x] TODO: Protokoll Dateiname anpassen
 
-%//[ ] TODO: Auswertung
+%//[x] TODO: Auswertung
 % evtl. Formeln, etc.
 % auf richtiges Runden der Werte achten
 % evtl. auf Gleichungen Bezug nehmen
@@ -265,15 +251,15 @@ Die Unsicherheit von $e$ entspricht der Kombination der Unsicherheiten von $e_1$
 Die Werte der Unsicherheiten sind folgender Tabelle zu entnehmen:
 
 \begin{table}[H]
-	\centering
-	\begin{tabular}{c|c|c|c}
-		$s$ /cm & $e_1$ /cm & $e_2$ /cm & $e$ /cm \\ \hline
-		$45.0\pm0,03$ & $14,30\pm0,20$ & $30,85\pm0,12$ & $16,55\pm0,32$ \\
-		$50.0\pm0,03$ & $13,10\pm0,17$ & $36,75\pm0,08$ & $23,65\pm0,25$ \\
-		$55.0\pm0,03$ & $12,65\pm0,22$ & $42,35\pm0,05$ & $29,70\pm0,27$ \\
-		$60.0\pm0,03$ & $12,30\pm0,13$ & $48,80\pm0,07$ & $36,10\pm0,20$ \\
-		$65.0\pm0,03$ & $11,70\pm0,10$ & $54,00\pm0,07$ & $42,30\pm0,17$ \\
-	\end{tabular}
+    \centering
+    \begin{tabular}{c|c|c|c}
+        $s$ /cm & $e_1$ /cm & $e_2$ /cm & $e$ /cm \\ \hline
+        $45.0\pm0,03$ & $14,30\pm0,20$ & $30,85\pm0,12$ & $16,55\pm0,24$ \\
+        $50.0\pm0,03$ & $13,10\pm0,17$ & $36,75\pm0,08$ & $23,65\pm0,19$ \\
+        $55.0\pm0,03$ & $12,65\pm0,22$ & $42,35\pm0,05$ & $29,70\pm0,23$ \\
+        $60.0\pm0,03$ & $12,30\pm0,13$ & $48,80\pm0,07$ & $36,10\pm0,15$ \\
+        $65.0\pm0,03$ & $11,70\pm0,10$ & $54,00\pm0,07$ & $42,30\pm0,13$ \\
+    \end{tabular}
     \caption{Ermittlung von $e$, Unsicherheiten}
 \end{table}
 
@@ -284,11 +270,11 @@ Zusammen mit der Unsicherheit $u_f$ aus der Gleichung \ref{eq:BesselBrennwUnsFor
     \centering
     \begin{tabular}{c|c|c}
         $s$ /cm & $f$ /cm & $u_f$ /cm \\ \hline
-        $45.0\pm0,03$ & $9,73$ & $0,06$ \\
-        $50.0\pm0,03$ & $9,70$ & $0,06$ \\
-        $55.0\pm0,03$ & $9,74$ & $0,08$ \\
-        $60.0\pm0,03$ & $9,57$ & $0,07$ \\
-        $65.0\pm0,03$ & $9,37$ & $0,06$ \\
+        $45.0\pm0,03$ & $9,73$ & $0,05$ \\
+        $50.0\pm0,03$ & $9,70$ & $0,05$ \\
+        $55.0\pm0,03$ & $9,74$ & $0,07$ \\
+        $60.0\pm0,03$ & $9,57$ & $0,05$ \\
+        $65.0\pm0,03$ & $9,37$ & $0,05$ \\
     \end{tabular}
     \caption{Brennweite $f$ und Unsicherheit $u_f$}
 \end{table}
@@ -297,16 +283,16 @@ Mit $f$ und $u_f$ können nun der gewichtete Mittelwert $\bar{f_g}$ und die gewi
 nach den Gleichungen \ref{eq:Mittelwert} und \ref{eq:GewichtUnsicherheit} berechnet werden.
 
 \begin{equation*}
-    \bar{f_g} = 9,606\mathrm{cm}
+    \bar{f_g} = 9,601\mathrm{cm}
 \end{equation*}
 
 \begin{equation*}
-    u_{\bar{f_g}} = 0,028\mathrm{cm}
+    u_{\bar{f_g}} = 0,021\mathrm{cm}
 \end{equation*}
 
 
 \section{Diskussion}
-%//[ ] TODO: Diskussion
+%//[x] TODO: Diskussion
 % Wie vergleicht sich meine Messung mit anderen Messungen/Theorien?
 % Ist der Messwert sinnvoll? Stimmt die Größenordnung?
 % Wo wurden Fehler gemacht? Was kann man verbessern?
